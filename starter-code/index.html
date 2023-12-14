@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Frontend Mentor | Dictionary web app</title>
+</head>
+<body class="body">
+      
+      <header>
+
+        <div class="header-container">
+          <div >
+            <img src="./assets/images/icon_book.svg">
+          </div>
+
+          <div class="header-flex">
+
+            <div>
+              <div class="option-background"> 
+             <select name="fonts" id="fontFamily" class="select-family">
+
+                  
+                    <option value="serif" id="serif">Serif</option>
+                    <option value="sansSerif" id="sanserif"> Sans Serif</option>
+                    <option value="mono" id="mono">Mono</option>
+               
+            
+
+             </select>
+            </div>
+
+            </div>  
+
+          
+          
+            <div class="line"></div>
+
+            <div class="dark-mode">
+
+              <label class="switch">
+                <input type="checkbox" id="switch">
+                <span class="slider"></span>
+              </label>
+             
+                <span id="light-moon"><img src="./assets/images/icon-moon.svg" alt=""> </span>
+            </div><!--Dark Mode-->
+
+          </div><!--Header Flex-->
+
+        </div><!--Header Container-->
+
+
+      </header>
+
+
+      <div class="input-search">
+
+        <div class="input-content">
+          <label for="search" class="search">
+            <input type="text" name="search"  placeholder="Search" class="input">
+         
+          </label>
+            
+          <img src="./assets/images/icon-search.svg">
+         
+        </div>
+      
+
+      </div><!--input Search-->
+
+ 
+        <main class="main-container">
+            <div class="main-content">
+
+              <section class="first-section">
+
+                <div class="search-title"> 
+                  <h2 class="search-title">Keyboard</h2>
+  
+                  <p class="parr-first-section"> /'ki:bc:d/</p>
+                </div>
+  
+                <div class="play-icon">
+                  <img src="./assets/images/icon-play.svg" alt="">
+                </div>
+  
+              </section>
+
+
+              <section class="second-section">
+
+                <div class="flex-noun">
+                  <p class="parragraph">noun</p>
+                  <div class="line-noun"></div>
+                </div>
+
+
+                <div class="meaning"> 
+
+                  <ul>
+                    <h3>Meaning</h3>
+
+                    <li class="list-of-meaning"> <span class="list-style"></span> set of keys used to operate a typewriter, computer etc.</li>
+                    <li class="list-of-meaning">A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
+                    <li class="list-of-meaning">A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
+                  </ul>
+
+                    <div class="meaning-synon">
+                      <h3>Synonyms</h3>
+                      <p>electronic keyboard  </p>
+                    </div>
+
+
+                </div><!--meaning-->
+
+
+                <div class="flex-noun">
+                  <p class="parragraph">verb</p>
+                 <div class="line-noun"></div>
+            
+                </div>
+
+             <di class="meaning">
+
+                  <ul>
+                    <h3 >Meaning</h3>
+      
+                    <li class="list-of-meaning">To type on a computer keyboard.</li>
+                    <p class="meaning-parragraph">“Keyboarding is the part of this job I hate the most.”</p>
+                  </ul>
+
+                  <div class="other-resources">
+                    <p>Source</p>
+                    <a href="https://en.wiktionary.org/wiki/keyboard" target="_blank" class="link"> https://en.wiktionary.org/wiki/keyboard <span><img src="./assets/images/icon-new-window.svg" alt="">
+                    </div></span> </a>
+                
+                  
+
+             </di><!--second meaning-->
+ 
+            
+   
+             </div>
+
+              </section>
+        </main>
+
+
+        <script src="./javascript/app.js"></script>
+</body>
+</html>
