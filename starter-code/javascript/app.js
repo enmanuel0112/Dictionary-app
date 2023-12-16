@@ -13,6 +13,9 @@ function changeDarkMode () {
     const searchTitle = document.querySelector('.search-title');
     const parragraph = document.querySelectorAll('.parragraph');
     const listOfMeaning = document.querySelectorAll('.list-of-meaning');
+    const optionFont = document.getElementById('select');
+    const optionIcon = document.querySelector('.icon');
+    const getOptions = document.querySelector('.get-options');
    
    
     
@@ -21,6 +24,9 @@ function changeDarkMode () {
     switchBotton.classList.toggle('purple-switch-botton');
     inputSeachBar.classList.toggle('input-search-bar');
     inputPlaceHolder.classList.toggle('inputPlaceHolder');
+    optionFont.classList.toggle('select-font');
+    optionIcon.classList.toggle('select-icon');
+    getOptions.classList.toggle('get-ontions-dark');
    
     searchTitle.classList.toggle('search-title-dark-mode');
    
@@ -37,18 +43,25 @@ function changeDarkMode () {
 
 // Get the Fonts //
 
+const selectOption = document.querySelector('.select-option');
+const  options = document.querySelectorAll('.options');
 
-const selectFonts = document.getElementById('fontFamily');
+selectOption.addEventListener('click', () =>{
+  const getOptions = document.querySelector('.get-options');
+  const optionIcon = document.querySelector('.fa-angle-down');
 
-selectFonts.addEventListener('change', event => {
-    const font = event.target.value
+  optionIcon.classList.toggle('fa-angle-up')
+  getOptions.classList.toggle('get-options-toggle');
 
-    if (font) {
-        const bodyFamily = document.querySelector('body');
-        console.log(font)
-
-        bodyFamily.style.setProperty('--currentFamily', font)
-    }
 });
 
+options.forEach(option => {
+option.addEventListener('click' , () =>{
+    options.forEach( (option) => {option.classList.remove('seleted')});
 
+  
+
+
+})
+
+});
