@@ -45,9 +45,11 @@ function changeDarkMode () {
 
 const selectOption = document.querySelector('.select-option');
 const  options = document.querySelectorAll('.options');
+const optionSelected = document.getElementById('select');
+const getOptions = document.querySelector('.get-options');
 
 selectOption.addEventListener('click', () =>{
-  const getOptions = document.querySelector('.get-options');
+ 
   const optionIcon = document.querySelector('.fa-angle-down');
 
   optionIcon.classList.toggle('fa-angle-up')
@@ -57,11 +59,34 @@ selectOption.addEventListener('click', () =>{
 
 options.forEach(option => {
 option.addEventListener('click' , () =>{
-    options.forEach( (option) => {option.classList.remove('seleted')});
+    let selectingOptions = option.querySelector('.option-text').innerText;
+     optionSelected.innerText = selectingOptions;
 
-  
+    getOptions.classList.remove('get-options-toggle');
+
+    // Changing the font //
+    
+    let sans = document.getElementById('sans');
+    let serif = document.getElementById('serif');
+    let mono = document.getElementById('mono');
+       
+
+    if(option == sans){
+    const sansFont = document.querySelector('.sans-font');
+
+    sansFont.styl.fontFamily = 'monospace'
+
+    }else if (option == serif){
+        const serifFont = document.querySelector('.serif-font');
 
 
-})
+    }else if (option == mono){
+        const monoFont = document.querySelector('.mono-font');
+
+        
+
+    }
+
+});
 
 });

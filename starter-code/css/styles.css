@@ -296,6 +296,84 @@ li{
     font-weight: 300;
 }
 
+
+
+/* Responsive */
+
+@media (max-width:480px){
+
+    header{
+        width: 100%;
+        max-width: 100%;
+        padding:0 2rem;
+        margin: 1rem  auto;
+    }
+
+    .input-search{
+        width: 90%;
+        max-width: 90%;
+        margin: 1.5rem auto;
+    }
+    .input-content {
+        padding: 5px 15px;
+    }
+    .input{
+        width: 100%;
+        padding: 5px;
+    }
+
+
+    /* Main */
+    .main-container {
+        max-width: 90%;
+    }
+
+    .search-title h2{ 
+        font-size: 2rem;
+    }
+    .parr-first-section{
+        font-size: 15px;
+    }
+
+    .play-icon img{ 
+        width: auto;
+        height: 50px;
+    }
+
+
+    /* second section */
+
+    .parragraph{
+        font-size: 1rem;
+    }
+    .meaning h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    header{
+        width: 100%;
+        max-width: 100%;
+        padding:0 2rem;
+        margin: 1rem  auto;
+    }
+
+    .main-container {
+        max-width: 90%;
+    }
+
+}
+
+
+/* change font */
+
+
+
+
+
+
 /* DarkMode */
 
 .black-body{
