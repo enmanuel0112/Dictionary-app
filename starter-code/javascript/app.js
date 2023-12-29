@@ -66,27 +66,99 @@ option.addEventListener('click' , () =>{
 
     // Changing the font //
     
-    let sans = document.getElementById('sans');
-    let serif = document.getElementById('serif');
-    let mono = document.getElementById('mono');
        
 
-    if(option == sans){
-    const sansFont = document.querySelector('.sans-font');
-
-    sansFont.styl.fontFamily = 'monospace'
-
-    }else if (option == serif){
-        const serifFont = document.querySelector('.serif-font');
+    const root = document.querySelector(':root');
 
 
-    }else if (option == mono){
-        const monoFont = document.querySelector('.mono-font');
-
-        
-
+    if(optionSelected.innerHTML === 'Sans Serif'){
+        root.style.setProperty('--currentFamily', 'sans-serif');
     }
 
+    if(optionSelected.innerHTML === 'Serif'){
+        root.style.setProperty('--currentFamily', 'serif');
+    }
+
+    if(optionSelected.innerHTML === 'Mono'){
+        root.style.setProperty('--currentFamily', 'monospace');
+    }
 });
 
+})
+
+
+
+// Get the input value and show on the Dictionary // 
+
+const searchIcon =  document.getElementById('search');
+
+
+searchIcon.addEventListener('click', () =>{
+   
+    let inputValue = document.getElementById('value').value;
+    const TitleSearch = document.querySelector('.search-word');
+    const searchWord = document.createElement('h2');
+
+
+    searchWord.innerText = inputValue
+
+
+    TitleSearch.append(searchWord);
+
+
+
+
+    
+async function TestingFetching () {
+
+
+    let meaning = document.querySelector('.list-of-meaning');
+    let meaning2 = document.querySelector('.meaning2');
+    const showResult = document.querySelector('.main-container');
+    const api =  `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`
+
+    
+ await fetch(api) 
+    .then(result => {
+
+        return result.json();
+       
+    })
+    .then(datos => {
+
+        console.log(datos);
+        const resultado =  datos[0].meanings[0].definitions[1].definition;
+        const resultado2 =  datos[0].meanings[0].definitions[2].definition;
+     
+
+        showResult.style.display = 'block';
+          
+            meaning.innerText = resultado;
+            meaning2.innerText = resultado2;
+          
+
+
+        console.log(resultado)
+        console.log(resultado2)
+        
+       
+
+    
+    })
+} 
+ 
+
+
+    TestingFetching()
+
+
+
+
+
+
 });
+
+
+
+
+

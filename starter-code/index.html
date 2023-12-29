@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
-<body class="body sans-font serif-font mono-font ">
+<body class="body">
       
       <header>
 
@@ -69,12 +69,12 @@
       <div class="input-search">
 
         <div class="input-content">
-          <label for="search" class="search">
-            <input type="text" name="search"  placeholder="Search" class="input">
+          <label for="search" class="search" >
+            <input type="text" name="search"  placeholder="Search" class="input" id="value">
          
           </label>
             
-          <img src="./assets/images/icon-search.svg">
+          <img src="./assets/images/icon-search.svg" id="search">
          
         </div>
       
@@ -88,7 +88,7 @@
               <section class="first-section">
 
                 <div class="search-title"> 
-                  <h2 class="search-title">Keyboard</h2>
+                  <h2 class="search-word" ></h2>
   
                   <p class="parr-first-section"> /'ki:bc:d/</p>
                 </div>
@@ -114,8 +114,8 @@
                     <h3>Meaning</h3>
 
                     <li class="list-of-meaning"> <span class="list-style"></span> set of keys used to operate a typewriter, computer etc.</li>
-                    <li class="list-of-meaning">A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
-                    <li class="list-of-meaning">A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
+                    <li class="list-of-meaning meaning2">A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
+                
                   </ul>
 
                     <div class="meaning-synon">
@@ -159,6 +159,8 @@
         </main>
 
 
+
+        
         <script src="./javascript/app.js"></script>
 </body>
 </html>

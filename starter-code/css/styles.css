@@ -18,13 +18,16 @@
     --red: #FF5252;
 
     /* Font Family */
-    --currentFamily: monospace;
+    --currentFamily: monospace ;
     --fontFamilySanSerif: sans-serif;
     --fontFamilySerif: serif;
     --fontFamilyMono: monospace;
     
 }
 
+body{
+   font-family: var(--currentFamily);
+}
 /* header */
 
 header{
@@ -184,6 +187,7 @@ input:checked + .slider::before{
     max-width: 50%;
     margin: auto;
     margin-bottom: 3rem;
+    display: none;
 }
 .main-content {
     width: 100%;
@@ -360,18 +364,17 @@ li{
         margin: 1rem  auto;
     }
 
+    .input-search{
+        width: 90%;
+        max-width: 90%;
+        margin: 1.5rem auto;
+    }
+
     .main-container {
         max-width: 90%;
     }
 
 }
-
-
-/* change font */
-
-
-
-
 
 
 /* DarkMode */
