@@ -97,13 +97,12 @@ searchIcon.addEventListener('click', () =>{
    
     let inputValue = document.getElementById('value').value;
     const TitleSearch = document.querySelector('.search-word');
-    const searchWord = document.createElement('h2');
+    
 
 
-    searchWord.innerText = inputValue
+    TitleSearch.innerText = inputValue
 
 
-    TitleSearch.append(searchWord);
 
 
 
@@ -117,16 +116,11 @@ async function TestingFetching () {
     const showResult = document.querySelector('.main-container');
     const api =  `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`
 
-    
- await fetch(api) 
-    .then(result => {
+    const datos = await fetch(api) .then(result =>  result.json());
 
-        return result.json();
-       
-    })
-    .then(datos => {
 
-        console.log(datos);
+    if(Array.isArray(datos)){
+        console.log('isARRAY::> ', datos);
         const resultado =  datos[0].meanings[0].definitions[1].definition;
         const resultado2 =  datos[0].meanings[0].definitions[2].definition;
      
@@ -138,13 +132,35 @@ async function TestingFetching () {
           
 
 
-        console.log(resultado)
+        console.log('prueba de esto',resultado)
         console.log(resultado2)
         
-       
+    }else{
 
+
+        console.log(datos);
+
+        const showError = document.querySelector('.show-error');
+        let notfound = document.querySelector('.not-found');
+        let messageNotFound = document.querySelector('.message-not-found');
+        let resolutionNotFound = document.querySelector('.resolution-not-found');
+
+        showError.style.display = 'block';
+        showResult.style.display = 'none';
+
+        const datoTIttle = datos.title;
+        const datoMessage = datos.message;
+        const datoresolution = datos.resolution;
+
+
+        notfound.innerText = datoTIttle;
+        messageNotFound.innerText = datoMessage;
+        resolutionNotFound.innerText = datoresolution ; 
+
+
+    }
     
-    })
+    
 } 
  
 

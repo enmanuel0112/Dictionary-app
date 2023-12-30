@@ -300,6 +300,9 @@ li{
     font-weight: 300;
 }
 
+.show-error{
+    display: none;
+}
 
 
 /* Responsive */
