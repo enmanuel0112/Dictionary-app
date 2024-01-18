@@ -70,19 +70,31 @@
 
         <div class="input-content">
           <label for="search" class="search" >
-            <input type="text" name="search"  placeholder="Search" class="input" id="value" >
+            <input type="text" name="search"  placeholder="Search for any word..." class="input" id="value" >
+           
          
           </label>
+          
             
           <img src="./assets/images/icon-search.svg" id="search">
          
         </div>
       
-
+        <p class="input-empty">Whoops, can't be empty...</p>
       </div><!--input Search-->
 
- 
+      <div class="spinner-background">
+        
+        <div class="spinner-center">
+           <div class="spinner-loading"></div>
+       </div>
+    </div><!--spinner loading-->
+
+
         <main class="main-container">
+
+         
+
             <div class="main-content">
 
               <section class="first-section">
@@ -93,14 +105,18 @@
                 <div class="search-title"> 
                   <h2 class="search-word" ></h2>
   
-                  <p class="parr-first-section"> /'ki:bc:d/</p>
+                  <p class="parr-first-section"> </p>
                 </div>
   
-                <div class="play-icon">
-                  <img src="./assets/images/icon-play.svg" alt="">
-                </div>
-  
-              </section>
+                
+                  <div class="play-icon">
+
+                    <img src="./assets/images/icon-play.svg" alt="" >
+
+                  </div>
+
+
+              </section><!--first s-->
 
 
               <section class="second-section">
@@ -112,18 +128,12 @@
 
 
                 <div class="meaning"> 
-
-                  <ul>
-                    <h3>Meaning</h3>
-
-                    <li class="list-of-meaning"> <span class="list-style"></span> set of keys used to operate a typewriter, computer etc.</li>
-                    <li class="list-of-meaning meaning2">A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
-                
-                  </ul>
+                  <h3>Meaning</h3>
+                  <div class="list-of-definitions"></div>
 
                     <div class="meaning-synon">
                       <h3>Synonyms</h3>
-                      <p>electronic keyboard  </p>
+                      <p class="synonyms"></p>
                     </div>
 
 
@@ -141,14 +151,16 @@
                   <ul>
                     <h3 >Meaning</h3>
       
-                    <li class="list-of-meaning">To type on a computer keyboard.</li>
-                    <p class="meaning-parragraph">“Keyboarding is the part of this job I hate the most.”</p>
+                    <div class="list-of-meaning"></div>
+                    <p class="meaning-parragraph"></p>
                   </ul>
 
                   <div class="other-resources">
                     <p>Source</p>
-                    <a href="https://en.wiktionary.org/wiki/keyboard" target="_blank" class="link"> https://en.wiktionary.org/wiki/keyboard <span><img src="./assets/images/icon-new-window.svg" alt="">
-                    </div></span> </a>
+
+                    <div class="push-resource-links"></div>
+              
+                  </div>
                 
                   
 
@@ -162,6 +174,8 @@
         </main>
 
         <div class="show-error">
+
+          <div class="emoji">😕 </div>
 
           <h2 class="not-found"></h2>
 
