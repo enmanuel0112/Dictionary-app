@@ -537,3 +537,7 @@ li {
 .moon-dark {
     stroke: var(--purple);
 }
+
+.not-found-dark {
+    color: var(--white1);
+}

@@ -12,6 +12,7 @@ function changeDarkMode() {
     const optionIcon = document.querySelector('.icon');
     const getOptions = document.querySelector('.get-options');
     const moon = document.querySelector('.dark-moon');
+    const showError = document.querySelector('.not-found');
 
     bodyDarkMode.classList.toggle('black-body');
     switchBotton.classList.toggle('purple-switch-botton');
@@ -21,7 +22,7 @@ function changeDarkMode() {
     optionIcon.classList.toggle('select-icon');
     getOptions.classList.toggle('get-ontions-dark');
     moon.classList.toggle('moon-dark');
-
+    showError.classList.toggle('not-found-dark')
     searchTitle.classList.toggle('search-title-dark-mode');
 
     parragraph.forEach((parra) => parra.classList.toggle('parragraph-dark-mode'));
