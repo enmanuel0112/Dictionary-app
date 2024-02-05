@@ -117,10 +117,7 @@ header {
     position: relative;
     width: 50px;
     height: 25px;
-}
-
-#switch {
-    visibility: hidden;
+    inline-size: none;
 }
 
 .slider {

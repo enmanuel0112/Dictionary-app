@@ -11,9 +11,7 @@ function changeDarkMode() {
     const optionFont = document.getElementById('select');
     const optionIcon = document.querySelector('.icon');
     const getOptions = document.querySelector('.get-options');
-    const moon = document.getElementById('search');
-
-    console.log('bodyDarkMode')
+    const moon = document.querySelector('.dark-moon');
 
     bodyDarkMode.classList.toggle('black-body');
     switchBotton.classList.toggle('purple-switch-botton');
@@ -47,24 +45,15 @@ options.forEach(option => {
     option.addEventListener('click', () => {
         let selectingOptions = option.querySelector('.option-text').innerText;
         optionSelected.innerText = selectingOptions;
-
         getOptions.classList.remove('get-options-toggle');
-
         // Changing the font //
-
-
-
         const root = document.querySelector(':root');
-
-
         if (optionSelected.innerHTML === 'Sans Serif') {
             root.style.setProperty('--currentFamily', 'sans-serif');
         }
-
         if (optionSelected.innerHTML === 'Serif') {
             root.style.setProperty('--currentFamily', 'serif');
         }
-
         if (optionSelected.innerHTML === 'Mono') {
             root.style.setProperty('--currentFamily', 'monospace');
         }
@@ -76,7 +65,7 @@ options.forEach(option => {
 // Get the input value and show on the Dictionary // 
 
 const searchIcon = document.getElementById('search');
-
+console.log(searchIcon)
 searchIcon.addEventListener('click', () => {
     const loading = document.querySelector('.spinner-background');
     function LoadingSpinner() {
