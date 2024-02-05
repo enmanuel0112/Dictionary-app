@@ -120,6 +120,10 @@ header {
     inline-size: none;
 }
 
+#switch {
+    visibility: hidden;
+}
+
 .slider {
     cursor: pointer;
     position: absolute;
